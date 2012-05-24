@@ -1,0 +1,55 @@
+/* ===========================================================================
+   Typography
+   ======================================================================== */
+@baseFontSize: 16;
+@baseLineHeight: 21;
+
+.fontSize(@fontSize) {
+	font-size: 0px + @fontSize; font-size: 0rem + @fontSize/@baseFontSize;
+}
+
+p {
+	@fontSize: 13; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	margin: (0em + @rhythm) 0;
+}
+
+h1 {
+	@fontSize: 42; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	line-height: 2em * @rhythm;
+	margin: (1.5em * @rhythm) 0 (0.5em * @rhythm);
+}
+h2 {
+	@fontSize: 32; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	line-height: 2em * @rhythm;
+	margin: (2/3em * @rhythm) 0 (1/3em * @rhythm);
+}
+
+h3 {
+	@fontSize: 21; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	line-height: 1em;
+	margin: (2/3em * @rhythm) 0 (1/3em * @rhythm);
+}
+
+h4 {
+	@fontSize: 18; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	line-height: 0em + @rhythm;
+}
+
+h5 {
+	@fontSize: 14; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	line-height: 0em + @rhythm;
+}
+
+h6 {
+	@fontSize: 11; .fontSize(@fontSize);
+	@rhythm: @baseLineHeight/@fontSize;
+	line-height : 0em + @rhythm;
+	text-transform: uppercase;
+	color: gray;
+}
